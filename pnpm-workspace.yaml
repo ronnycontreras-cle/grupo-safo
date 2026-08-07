@@ -1,8 +1,8 @@
 packages:
-  - "apps/*"
-
+  - 'apps/*'
+  - 'libs/*'
 autoInstallPeers: true
 allowBuilds:
   nx: true
-  "@swc/core": false
+  '@swc/core': false
   esbuild: false

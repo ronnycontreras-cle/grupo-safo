@@ -5,6 +5,18 @@
   "references": [
     {
       "path": "./apps/operator"
+    },
+    {
+      "path": "./apps/supplier-portal"
+    },
+    {
+      "path": "./libs/ui"
+    },
+    {
+      "path": "./libs/contracts"
+    },
+    {
+      "path": "./libs/operator-core"
     }
   ]
 }
