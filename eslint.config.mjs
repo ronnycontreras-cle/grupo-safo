@@ -23,15 +23,35 @@ export default [
             "@nx/enforce-module-boundaries": [
                 "error",
                 {
-                    enforceBuildableLibDependency: true,
+                    enforceBuildableLibDependency: false,
                     allow: [
                         "^.*/eslint(\\.base)?\\.config\\.[cm]?[jt]s$"
                     ],
                     depConstraints: [
                         {
-                            sourceTag: "*",
+                            sourceTag: "scope:shared",
                             onlyDependOnLibsWithTags: [
-                                "*"
+                                "scope:shared"
+                            ]
+                        },
+                        {
+                            sourceTag: "scope:operator",
+                            onlyDependOnLibsWithTags: [
+                                "scope:operator",
+                                "scope:shared"
+                            ]
+                        },
+                        {
+                            sourceTag: "scope:supplier",
+                            onlyDependOnLibsWithTags: [
+                                "scope:supplier",
+                                "scope:shared"
+                            ]
+                        },
+                        {
+                            sourceTag: "type:ui",
+                            onlyDependOnLibsWithTags: [
+                                "type:ui"
                             ]
                         }
                     ]

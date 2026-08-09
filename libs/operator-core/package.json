@@ -3,6 +3,9 @@
   "version": "0.0.1",
   "private": true,
   "type": "module",
+  "nx": {
+    "tags": ["scope:operator", "type:core"]
+  },
   "main": "./src/index.ts",
   "types": "./src/index.ts",
   "exports": {
