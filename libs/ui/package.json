@@ -10,6 +10,7 @@
   "types": "./dist/index.d.ts",
   "exports": {
     "./package.json": "./package.json",
+    "./tokens.css": "./src/tokens.css",
     ".": {
       "@sourcing-foods/source": "./src/index.ts",
       "types": "./dist/index.d.ts",

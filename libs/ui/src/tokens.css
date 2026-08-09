@@ -1,0 +1,60 @@
+@import 'tailwindcss';
+
+@theme static {
+  /* primitivos */
+  --color-ink: #1e1b19;
+  --color-violet-500: #7c3aed;
+  --color-green-600: #2e6a4b;
+  --color-blue-500: #3b6fe0;
+  --color-amber-500: #e5a21a;
+  --color-red-600: #dc2626;
+  --color-gray-50: #f7f6f8;
+  --color-gray-200: #e5e4e7;
+  --color-gray-900: #1a1817;
+
+  /* semánticos — la capa que usan los componentes */
+  --color-primary: var(--color-ink);
+  --color-accent: var(--color-violet-500);
+  --color-success: var(--color-green-600);
+  --color-info: var(--color-blue-500);
+  --color-warning: var(--color-amber-500);
+  --color-destructive: var(--color-red-600);
+  --color-background: var(--color-gray-50);
+  --color-surface: #ffffff;
+  --color-border: var(--color-gray-200);
+  --color-foreground: var(--color-gray-900);
+
+  --radius-md: 0.5rem; /* inputs, botones */
+  --radius-lg: 0.875rem; /* cards */
+}
+
+/*
+ * Dark mode — solo se redefine la capa semántica (el lienzo y los estados),
+ * nunca los primitivos. Valores placeholder: no vienen del Figma (que solo
+ * documenta el modo claro), hay que refinarlos con las variables reales
+ * cuando existan. Se activa por preferencia del sistema o con
+ * data-theme="dark" en <html> para un toggle manual.
+ */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    --color-background: #17151a;
+    --color-surface: #201d22;
+    --color-border: #322e35;
+    --color-foreground: #f2f0f3;
+    --color-success: #4ca97a;
+    --color-info: #6b93e8;
+    --color-warning: #f0b94a;
+    --color-destructive: #ef5a5a;
+  }
+}
+
+:root[data-theme='dark'] {
+  --color-background: #17151a;
+  --color-surface: #201d22;
+  --color-border: #322e35;
+  --color-foreground: #f2f0f3;
+  --color-success: #4ca97a;
+  --color-info: #6b93e8;
+  --color-warning: #f0b94a;
+  --color-destructive: #ef5a5a;
+}

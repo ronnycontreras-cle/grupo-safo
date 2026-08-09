@@ -2,6 +2,9 @@
   "name": "@sourcing-foods/operator",
   "version": "0.0.1",
   "private": true,
+  "dependencies": {
+    "@sourcing-foods/ui": "workspace:*"
+  },
   "nx": {
     "tags": ["scope:operator", "type:app"]
   }

@@ -2,6 +2,9 @@
   "name": "@sourcing-foods/supplier-portal",
   "version": "0.0.1",
   "private": true,
+  "dependencies": {
+    "@sourcing-foods/ui": "workspace:*"
+  },
   "nx": {
     "tags": ["scope:supplier", "type:app"]
   }
