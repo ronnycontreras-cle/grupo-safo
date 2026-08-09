@@ -1,5 +1,13 @@
 @import 'tailwindcss';
 
+/*
+ * Tailwind no escanea node_modules por defecto, así que sin esto las
+ * clases usadas dentro de los componentes de esta lib (bg-primary,
+ * bg-success, rounded-full, etc.) no llegan al CSS final de las apps
+ * que la consumen vía workspace:*. La ruta es relativa a este archivo.
+ */
+@source './';
+
 @theme static {
   /* primitivos */
   --color-ink: #1e1b19;

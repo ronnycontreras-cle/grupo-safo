@@ -3,7 +3,10 @@
   "version": "0.0.1",
   "type": "module",
   "nx": {
-    "tags": ["scope:shared", "type:ui"]
+    "tags": [
+      "scope:shared",
+      "type:ui"
+    ]
   },
   "main": "./dist/index.js",
   "module": "./dist/index.js",
@@ -17,5 +20,15 @@
       "import": "./dist/index.js",
       "default": "./dist/index.js"
     }
+  },
+  "dependencies": {
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "react-hook-form": "^7.85.0",
+    "tailwind-merge": "^3.6.0"
+  },
+  "devDependencies": {
+    "@hookform/resolvers": "^5.7.1",
+    "zod": "^4.4.3"
   }
 }
